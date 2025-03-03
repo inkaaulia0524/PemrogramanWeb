@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            color: #444;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .radio-group, .checkbox-group {
+            margin-top: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            display: block;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Sederhana</h1>
+        
+        <h2>Bagian 1: Informasi Pribadi</h2>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+                <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+            </div>
+
+        <h2>Bagian 2: Informasi Tambahan</h2>
+            <label for="hobbies">Hobi:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="hobbies" value="Musik"> Musik</label>
+                <label><input type="checkbox" name="hobbies" value="Olahraga"> Olahraga</label>
+                <label><input type="checkbox" name="hobbies" value="Gaming"> Gaming</label>
+                <label><input type="checkbox" name="hobbies" value="Membaca"> Membaca</label>
+            </div>
+            
+            <label for="city">Pilih Kota:</label>
+            <select id="city" name="city" required>
+                <option value="">Pilih Kota</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Solo">Solo</option>
+                <option value="Bekasi">Bekasi</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Medan">Medan</option>
+                <option value="Bali">Bali</option>
+                <option value="Lombok">Lombok</option>
+            </select>
+            
+            <label for="photo">Upload Foto:</label>
+            <input type="file" id="photo" name="photo">
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
