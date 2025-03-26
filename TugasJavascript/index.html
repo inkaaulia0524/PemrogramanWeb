@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cek Nilai Mahasiswa</h1>
+        <form id="nilaiForm">
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" required>
+
+            <label for="nilai">Nilai Mata Kuliah:</label>
+            <input type="number" id="nilai" required>
+
+            <button type="button" onclick="cekNilai()">Cek Nilai</button>
+        </form>
+
+        <div id="hasil"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
