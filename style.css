@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #dceeff;
+  color: #333333; 
+}
+
+header {
+  background-color: #0077b6; 
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #caf0f8;
+  font-weight: bold;
+}
+
+.section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+  border: 4px solid #48cae4;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card-head {
+  background-color: #0096c7; 
+  border-radius: 15px;
+  color: #fff;
+}
+
+.card {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.07)
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #0077b6;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #00b4d8;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card a:hover {
+  background-color: #0077b6;
+}
+
+footer {
+  background-color: #0077b6;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f0f8ff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.dropdown-content a {
+  color: #0077b6;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #caf0f8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #0077b6;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: relative;
+    background-color: #e0f7fa;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 20px;
+  }
+
+  .dropdown-content a {
+    padding: 10px 0;
+  }
+
+  .dropdown-content.show {
+    display: block;
+  }
+}
+
+.section {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 80%;
+  height: 30px;
+  margin: 40px auto;
+  background: repeating-linear-gradient(
+    45deg,
+    #00b4d8,
+    #00b4d8 10px,
+    #f0f8ff 10px,
+    #f0f8ff 20px
+  );
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.divider::before {
+  content: "✦ ✦ ✦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0077b6;
+  font-size: 18px;
+  background-color: #f0f8ff;
+  padding: 0 10px;
+  font-family: 'Segoe UI', cursive;
+}
+
+.card {
+  width: 280px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+  animation: slideUp 1s ease-in-out;
+}
+
+.about-text h2 {
+  color: #0077b6;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.about-image img {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+}
